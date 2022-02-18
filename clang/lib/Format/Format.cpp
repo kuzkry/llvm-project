@@ -783,14 +783,13 @@ template <> struct MappingTraits<FormatStyle> {
     IO.mapOptional("ColumnLimit", Style.ColumnLimit);
     IO.mapOptional("CommentPragmas", Style.CommentPragmas);
     IO.mapOptional("QualifierAlignment", Style.QualifierAlignment);
+    IO.mapOptional("QualifierOrder", Style.QualifierOrder);
 
     // Default Order for Left/Right based Qualifier alignment.
     if (Style.QualifierAlignment == FormatStyle::QAS_Right)
       Style.QualifierOrder = {"type", "const", "volatile"};
     else if (Style.QualifierAlignment == FormatStyle::QAS_Left)
       Style.QualifierOrder = {"const", "volatile", "type"};
-    else if (Style.QualifierAlignment == FormatStyle::QAS_Custom)
-      IO.mapOptional("QualifierOrder", Style.QualifierOrder);
 
     IO.mapOptional("CompactNamespaces", Style.CompactNamespaces);
     IO.mapOptional("ConstructorInitializerIndentWidth",
