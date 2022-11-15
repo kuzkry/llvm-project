@@ -194,7 +194,7 @@ the configuration (without a prefix: ``Auto``).
 
 .. _AlignAfterOpenBracket:
 
-**AlignAfterOpenBracket** (``BracketAlignmentStyle``) :versionbadge:`clang-format 3.8` :ref:`¶ <AlignAfterOpenBracket>`
+**AlignAfterOpenBracket** (``BracketAlignmentStyle``) :versionbadge:`clang-format 3.5` :ref:`¶ <AlignAfterOpenBracket>`
   If ``true``, horizontally aligns arguments after an open bracket.
 
   This applies to round brackets (parentheses), angle brackets and square
